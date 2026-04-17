@@ -1,28 +1,30 @@
-# 🐳 OS Jackfruit – Mini Container Runtime
+# OS Jackfruit – Mini Container Runtime
 
-## 📌 Overview
+## 1. Overview
 
-This project implements a **lightweight container runtime in C**, inspired by Docker. It demonstrates core **Operating System concepts** such as process isolation, memory management, and inter-process communication using Linux system calls and kernel modules.
+This project implements a lightweight container runtime in C, inspired by Docker. It demonstrates core Operating System concepts such as process isolation, memory management, and inter-process communication using Linux system calls and kernel modules.
 
 The system consists of:
 
-* A **user-space container engine (`engine.c`)**
-* A **kernel-space memory monitor (`monitor.c`)**
+* A user-space container engine (`engine.c`)
+* A kernel-space memory monitor (`monitor.c`)
 
 ---
 
-## 🚀 Features
+## 2. Features
 
-### 🔹 Container Runtime
+### 2.1 Container Runtime
 
 * Create and manage multiple containers
 * Process isolation using:
 
   * Namespaces
   * `chroot()` filesystem isolation
-* Supports running independent root filesystems
+* Supports independent root filesystems
 
-### 🔹 CLI Interface
+---
+
+### 2.2 CLI Interface
 
 Commands implemented:
 
@@ -33,7 +35,7 @@ Commands implemented:
 
 ---
 
-### 🔹 Logging System
+### 2.3 Logging System
 
 * Captures container output
 * Uses pipes and buffering
@@ -41,21 +43,21 @@ Commands implemented:
 
 ---
 
-### 🔹 Memory Monitoring (Kernel Module)
+### 2.4 Memory Monitoring (Kernel Module)
 
 * Tracks memory usage of containers
 * Enforces:
 
-  * **Soft limit** → Warning message
-  * **Hard limit** → Terminates container
+  * Soft limit → Warning message
+  * Hard limit → Terminates container
 
 ---
 
-## 🛠️ Tech Stack
+## 3. Tech Stack
 
-* **Language:** C
-* **Platform:** Linux (Ubuntu recommended)
-* **Concepts Used:**
+* Language: C
+* Platform: Linux (Ubuntu recommended)
+* Concepts Used:
 
   * Process Management (`fork`, `clone`)
   * Namespaces
@@ -65,29 +67,29 @@ Commands implemented:
 
 ---
 
-## ⚙️ Setup Instructions
+## 4. Setup Instructions
 
-### 1. Clone the repository
+### 4.1 Clone the repository
 
 ```bash
 git clone https://github.com/<your-username>/OS-Jackfruit.git
 cd OS-Jackfruit
 ```
 
-### 2. Install dependencies
+### 4.2 Install dependencies
 
 ```bash
 sudo apt update
 sudo apt install build-essential linux-headers-$(uname -r)
 ```
 
-### 3. Build the project
+### 4.3 Build the project
 
 ```bash
 make
 ```
 
-### 4. Load kernel module
+### 4.4 Load kernel module
 
 ```bash
 sudo insmod monitor.ko
@@ -95,33 +97,33 @@ sudo insmod monitor.ko
 
 ---
 
-## ▶️ Usage
+## 5. Usage
 
-### Start supervisor
+### 5.1 Start supervisor
 
 ```bash
 sudo ./engine supervisor ./rootfs-base
 ```
 
-### Start a container
+### 5.2 Start a container
 
 ```bash
 sudo ./engine start alpha ./rootfs-alpha /bin/sh
 ```
 
-### List containers
+### 5.3 List containers
 
 ```bash
 sudo ./engine ps
 ```
 
-### View logs
+### 5.4 View logs
 
 ```bash
 sudo ./engine logs alpha
 ```
 
-### Stop container
+### 5.5 Stop container
 
 ```bash
 sudo ./engine stop alpha
@@ -129,34 +131,34 @@ sudo ./engine stop alpha
 
 ---
 
-## 🧪 Test Cases
+## 6. Test Cases
 
-### ✅ Test 1: Multiple Containers
+### 6.1 Multiple Containers
 
 * Started 2 containers simultaneously
 * Result: Both executed independently
 
-### ✅ Test 2: Soft Memory Limit
+### 6.2 Soft Memory Limit
 
 * Exceeded soft limit
 * Result: Warning logged
 
-### ✅ Test 3: Hard Memory Limit
+### 6.3 Hard Memory Limit
 
 * Exceeded hard limit
 * Result: Container terminated
 
-### ✅ Test 4: Logging
+### 6.4 Logging
 
 * Verified container output stored correctly
 
-### ✅ Test 5: CLI Commands
+### 6.5 CLI Commands
 
 * `ps`, `logs`, `stop` executed successfully
 
 ---
 
-## 📽️ Demonstration
+## 7. Demonstration
 
 The project demonstration includes:
 
@@ -168,15 +170,14 @@ The project demonstration includes:
 
 ---
 
-## 👥 Team Members
+## 8. Team Members
 
 * Student 1: [Your Name]
 * Student 2: [Teammate Name]
 
 ---
 
-## 📚 Conclusion
+## 9. Conclusion
 
-This project provides a hands-on understanding of **containerization and OS internals**, including process isolation, scheduling, and memory control. It simulates the core functionality of modern container systems like Docker in a simplified environment.
-
+This project provides a hands-on understanding of containerization and OS internals, including process isolation, scheduling, and memory control. It simulates the core functionality of modern container systems like Docker in a simplified environment.
 
