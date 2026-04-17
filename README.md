@@ -172,8 +172,10 @@ The project demonstration includes:
 
 ## 8. Team Members
 
-* Student 1: [Your Name]
-* Student 2: [Teammate Name]
+* Student 1: Pravith Mohandas
+*      SRN: PES1UG24AM202
+* Student 2: Vishnu Patruni
+*      SRN: PES1UG24AM187
 
 ---
 
