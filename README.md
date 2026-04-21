@@ -1,9 +1,9 @@
 # Jackfruit: Multi-Container Supervised Runtime
 
 ## 1. Team Information
-* **Name:** Piyush Shiv (PES1UG24AM191)
-* **Name:** Pratham S Reddy (PES1UG24AM200)
-* **Name:** Ramneek Gautam (PES1UG24AM220)
+* **Name:** Pravith Mohandas(PES1UG24AM202)
+* **Name:** Vishnu Patruni (PES1UG24AM187)
+
 
 ---
 
