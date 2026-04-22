@@ -1,4 +1,4 @@
-# Jackfruit: Multi-Container Supervised Runtime
+# Jackfruit:
 
 ## 1. Team: 
 * **Name:** Pravith Mohandas(PES1UG24AM202)
